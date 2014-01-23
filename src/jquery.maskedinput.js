@@ -1,4 +1,10 @@
-(function($) {
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    define(['jquery'], factory);
+  } else {
+    factory(jQuery);
+  }
+}(function ($) {
 
 function getPasteEvent() {
     var el = document.createElement('input'),
@@ -366,4 +372,4 @@ $.fn.extend({
 		});
 	}
 });
-})(jQuery);
+}));
