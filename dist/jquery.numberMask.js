@@ -1,5 +1,5 @@
 /*!
- * jQuery numberMask Plugin v1.0.0
+ * jQuery numberMask Plugin v1.0.3
  *
  * Licensed under the MIT License
  * Authors: Konstantin Krivlenia
@@ -140,6 +140,9 @@ $.fn.numberMask = function (options) {
     }
 
     return this;
+};
+$.fn.destroyNumberMask = function() {
+    this.unbind('keypress').unbind('keyup').unbind('blur');
 };
 return $;
 }));
